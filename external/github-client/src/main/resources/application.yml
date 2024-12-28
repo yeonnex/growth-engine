@@ -1,0 +1,2 @@
+api:
+  bearer-token: ${GITHUB_API_BEARER_TOKEN}
