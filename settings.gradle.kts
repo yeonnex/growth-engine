@@ -1,4 +1,4 @@
 rootProject.name = "growth-engine"
 
-include("growth-batch")
+include("batch")
 include(":external:mail-client")
