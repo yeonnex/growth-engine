@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: pass
+  mail:
+    host: smtp.naver.com
+    port: 465
+    username: syhoneyjam@naver.com
+    password: 2U6P95QS6B8N
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
