@@ -19,7 +19,14 @@ repositories {
 
 dependencies {
 
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${rootProject.ext.springCloudVersion}"
+        }
+    }
+
     implementation(project(":external:mail-client"))
+    implementation(project(":external:github-client"))
 
     implementation 'org.springframework.boot:spring-boot-starter-batch'
     runtimeOnly 'com.mysql:mysql-connector-j'

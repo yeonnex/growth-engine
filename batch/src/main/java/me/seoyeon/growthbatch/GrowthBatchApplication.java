@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"me.seoyeon.mailclient", "me.seoyeon.growthbatch"})
+@ComponentScan(basePackages = {"me.seoyeon.*"})
 @SpringBootApplication
 public class GrowthBatchApplication {
 

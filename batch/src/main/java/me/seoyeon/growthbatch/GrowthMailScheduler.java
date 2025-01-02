@@ -1,5 +1,9 @@
 package me.seoyeon.growthbatch;
 
+import java.util.List;
+import me.seoyeon.githubclient.dto.response.GitHubContentItem;
+import me.seoyeon.growthbatch.service.GrowthMemoItem;
+import me.seoyeon.growthbatch.service.GrowthRepoService;
 import me.seoyeon.mailclient.EmailSender;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -7,18 +11,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class GrowthMailScheduler {
 
-  private static int count;
   private final EmailSender eMailSender;
+  private final GrowthRepoService growthRepoService;
 
-  public GrowthMailScheduler(EmailSender emailSender) {
+  public GrowthMailScheduler(EmailSender emailSender, GrowthRepoService growthRepoService) {
     this.eMailSender = emailSender;
+    this.growthRepoService = growthRepoService;
   }
 
-  @Scheduled(fixedDelay = 7000)
+  @Scheduled(cron = "0 15 8 * * *")
+  //  @Scheduled(fixedDelay = 2000)
   public void sendMailToMe() {
-    System.out.println("이메일 전송 준비중...");
-    eMailSender.sendEmail("syhoneyjam@naver.com", "서연이 안녕 " + count, "안뇽 " + count);
-    count++;
-    System.out.println("이메일 전송 완료!");
+    List<GrowthMemoItem> memoItems = growthRepoService.pickRandomGrowthMemo(3);
+    List<GitHubContentItem> detailMemos = growthRepoService.getDetailMemos(memoItems);
+    detailMemos.forEach(
+        memo -> {
+          eMailSender.sendHTMLEmail("syhoneyjam@naver.com", memo.title(), memo.content());
+        });
   }
 }

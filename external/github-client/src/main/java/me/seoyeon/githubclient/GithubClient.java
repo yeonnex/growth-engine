@@ -1,5 +1,6 @@
 package me.seoyeon.githubclient;
 
+import me.seoyeon.githubclient.dto.response.GitHubContentItem;
 import me.seoyeon.githubclient.dto.response.GitHubTopLevelContents;
 import me.seoyeon.githubclient.dto.response.GitHubTreeContents;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -18,7 +19,7 @@ public interface GithubClient {
    * @return 최상위 항목 목록
    */
   @GetMapping("/repos/{owner}/{repo}/git/trees/master")
-  GitHubTopLevelContents getTopLevelContents(
+  GitHubTopLevelContents fetchTopLevelContents(
       @PathVariable("owner") String owner, @PathVariable("repo") String repo);
 
   /**
@@ -32,8 +33,14 @@ public interface GithubClient {
    * @return 트래의 내용
    */
   @GetMapping("/repos/{owner}/{repo}/git/trees/{treeSha}")
-  GitHubTreeContents getTreeContents(
+  GitHubTreeContents fetchTreeContents(
       @PathVariable("owner") String owner,
       @PathVariable("repo") String repo,
       @PathVariable("treeSha") String treeSha);
+
+  @GetMapping("/repos/{owner}/{repo}/git/blobs/{sha}")
+  GitHubContentItem fetchContentItem(
+      @PathVariable("owner") String owner,
+      @PathVariable("repo") String repo,
+      @PathVariable("sha") String sha);
 }
