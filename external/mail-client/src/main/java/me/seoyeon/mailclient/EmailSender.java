@@ -53,6 +53,9 @@ public class EmailSender {
       helper.setSubject(subject);
       message.setContent(this.markdownToHtmlConverter.convert(text), "text/html; charset=UTF-8");
       javaMailSender.send(message);
+
+      log.info("메일 발송 완료.");
+
     } catch (Exception e) {
       log.error(e.getMessage());
       throw new RuntimeException(e.getMessage());
