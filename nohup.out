@@ -1,0 +1,826 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-02T22:27:49.192+09:00  INFO 47597 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 47597 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-02T22:27:49.194+09:00  INFO 47597 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T22:27:49.617+09:00  INFO 47597 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9b5bb9f1-ebbc-3d60-a209-b63febdc2f3d
+2025-01-02T22:27:49.813+09:00  INFO 47597 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T22:27:50.067+09:00  INFO 47597 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c5a2baf
+2025-01-02T22:27:50.076+09:00  INFO 47597 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T22:27:50.262+09:00  INFO 47597 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.303 seconds (process running for 1.726)
+2025-01-02T22:27:50.264+09:00  INFO 47597 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+[GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d]]
+[GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d]]
+[GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a]]
+[GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a]]
+[GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7]]
+[GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a]]
+[GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d]]
+[GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a]]
+[GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7]]
+[GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d]]
+[GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7]]
+[GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7], GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a]]
+[GrowthMemoItem[title=kubernetes, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/4ed50d324ef5b6cbe19c90fd83a8ce46d04cdc0a], GrowthMemoItem[title=sql, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/ee6103e2fcc1bc09a4a8a28496c5bb783a36072d], GrowthMemoItem[title=java, url=https://api.github.com/repos/yeonnex/growth-bytes/git/trees/60b5cb06a3d771b7e9146a1c9fce9b693f75dac7]]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-02T22:35:44.329+09:00  INFO 55130 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 55130 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-02T22:35:44.330+09:00  INFO 55130 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T22:35:44.792+09:00  INFO 55130 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+2025-01-02T22:35:45.014+09:00  INFO 55130 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T22:35:45.241+09:00  INFO 55130 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c8e6f0
+2025-01-02T22:35:45.243+09:00  INFO 55130 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T22:35:45.398+09:00  INFO 55130 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.324 seconds (process running for 1.628)
+2025-01-02T22:35:45.400+09:00  INFO 55130 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-01-02T23:27:07.173+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m51s815ms).
+2025-01-03T00:38:27.102+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11m19s930ms).
+2025-01-03T01:47:26.089+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m58s986ms).
+2025-01-03T03:08:05.104+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m39s16ms).
+2025-01-03T04:31:27.055+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m21s951ms).
+2025-01-03T05:46:00.795+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h14m33s740ms).
+2025-01-03T06:32:28.090+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m27s295ms).
+2025-01-03T07:06:55.359+09:00 ERROR 55130 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+feign.RetryableException: Read timed out executing GET https://api.github.com/repos/yeonnex/growth-bytes/git/trees/902cfe7612695109e5de897846c13f602008832c
+	at feign.FeignException.errorExecuting(FeignException.java:300) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:105) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.5.jar!/:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.5.jar!/:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy61.fetchTreeContents(Unknown Source) ~[na:na]
+	at me.seoyeon.growthbatch.service.GrowthRepoService.pickRandomGrowthMemo(GrowthRepoService.java:59) ~[!/:0.0.1-SNAPSHOT]
+	at me.seoyeon.growthbatch.GrowthMailScheduler.sendMailToMe(GrowthMailScheduler.java:25) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at io.micrometer.observation.Observation.observe(Observation.java:498) ~[micrometer-observation-1.14.2.jar!/:1.14.2]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:347) ~[na:na]
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:827) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:759) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1690) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1599) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:114) ~[feign-core-13.5.jar!/:na]
+	at feign.Client$Default.execute(Client.java:110) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:92) ~[feign-core-13.5.jar!/:na]
+	... 20 common frames omitted
+
+2025-01-03T07:07:17.539+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m49s449ms).
+2025-01-03T07:09:06.683+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m49s139ms).
+2025-01-03T07:33:29.190+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m22s512ms).
+2025-01-03T07:59:44.747+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m15s556ms).
+2025-01-03T08:08:10.236+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m25s490ms).
+2025-01-03T09:00:00.104+09:00  WARN 55130 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m49s868ms).
+2025-01-03T09:02:53.454+09:00  INFO 55130 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-03T09:02:53.468+09:00  INFO 55130 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+Error: Unable to access jarfile batch/build/libs/batch-0.0.1-SNAPSHOT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T09:04:12.268+09:00  INFO 63916 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 63916 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T09:04:12.270+09:00  INFO 63916 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T09:04:12.722+09:00  INFO 63916 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+2025-01-03T09:04:12.928+09:00  INFO 63916 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T09:04:13.137+09:00  INFO 63916 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c8e6f0
+2025-01-03T09:04:13.138+09:00  INFO 63916 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T09:04:13.287+09:00  INFO 63916 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.284 seconds (process running for 1.57)
+2025-01-03T09:04:13.289+09:00  INFO 63916 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T09:25:38.795+09:00  INFO 78768 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 78768 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T09:25:38.796+09:00  INFO 78768 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T09:25:39.254+09:00  INFO 78768 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+2025-01-03T09:25:39.455+09:00  INFO 78768 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T09:25:39.671+09:00  INFO 78768 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71b6172c
+2025-01-03T09:25:39.672+09:00  INFO 78768 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T09:25:39.826+09:00  INFO 78768 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.279 seconds (process running for 1.553)
+2025-01-03T09:25:39.827+09:00  INFO 78768 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-01-03T09:30:25.725+09:00 ERROR 78768 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+feign.RetryableException: api.github.com executing GET https://api.github.com/repos/yeonnex/growth-bytes/git/trees/master
+	at feign.FeignException.errorExecuting(FeignException.java:300) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:105) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.5.jar!/:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.5.jar!/:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy62.fetchTopLevelContents(Unknown Source) ~[na:na]
+	at me.seoyeon.growthbatch.service.GrowthRepoService.pickRandomGrowthMemo(GrowthRepoService.java:38) ~[!/:0.0.1-SNAPSHOT]
+	at me.seoyeon.growthbatch.GrowthMailScheduler.sendMailToMe(GrowthMailScheduler.java:25) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at io.micrometer.observation.Observation.observe(Observation.java:498) ~[micrometer-observation-1.14.2.jar!/:1.14.2]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.UnknownHostException: api.github.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[na:na]
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:377) ~[na:na]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123) ~[na:na]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1675) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1599) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:114) ~[feign-core-13.5.jar!/:na]
+	at feign.Client$Default.execute(Client.java:110) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:92) ~[feign-core-13.5.jar!/:na]
+	... 20 common frames omitted
+
+2025-01-03T09:57:09.925+09:00  WARN 78768 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s762ms), soft-evicting connections from pool.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T11:46:43.114+09:00  INFO 68591 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 68591 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T11:46:43.116+09:00  INFO 68591 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T11:46:43.628+09:00  INFO 68591 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+2025-01-03T11:46:43.878+09:00  INFO 68591 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T11:46:44.130+09:00  INFO 68591 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71b6172c
+2025-01-03T11:46:44.132+09:00  INFO 68591 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T11:46:44.292+09:00  INFO 68591 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.435 seconds (process running for 1.718)
+2025-01-03T11:46:44.294+09:00  INFO 68591 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-01-03T11:49:09.124+09:00  INFO 68591 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T11:49:10.118+09:00  INFO 68591 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T11:49:11.201+09:00  INFO 68591 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T11:49:59.735+09:00  INFO 71225 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 71225 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T11:49:59.737+09:00  INFO 71225 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T11:50:00.175+09:00  INFO 71225 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+2025-01-03T11:50:00.370+09:00  INFO 71225 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T11:50:00.585+09:00  INFO 71225 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c8e6f0
+2025-01-03T11:50:00.586+09:00  INFO 71225 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T11:50:00.750+09:00  INFO 71225 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.26 seconds (process running for 1.525)
+2025-01-03T11:50:00.751+09:00  INFO 71225 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T11:50:52.817+09:00  INFO 72151 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 72151 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T11:50:52.819+09:00  INFO 72151 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T11:50:53.270+09:00  INFO 72151 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+2025-01-03T11:50:53.467+09:00  INFO 72151 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T11:50:53.673+09:00  INFO 72151 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71b6172c
+2025-01-03T11:50:53.674+09:00  INFO 72151 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T11:50:53.833+09:00  INFO 72151 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.263 seconds (process running for 1.528)
+2025-01-03T11:50:53.834+09:00  INFO 72151 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-01-03T11:53:00.476+09:00  WARN 68591 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m16s211ms).
+2025-01-03T11:53:09.990+09:00  WARN 72151 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m16s211ms).
+2025-01-03T11:53:52.226+09:00 ERROR 72151 --- [   scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+feign.RetryableException: Read timed out executing GET https://api.github.com/repos/yeonnex/growth-bytes/git/blobs/9591e94fe3ef56e8a802564b2eb4356cb71aa645
+	at feign.FeignException.errorExecuting(FeignException.java:300) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:105) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.5.jar!/:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.5.jar!/:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy62.fetchContentItem(Unknown Source) ~[na:na]
+	at me.seoyeon.growthbatch.service.GrowthRepoService.getDetailMemos(GrowthRepoService.java:119) ~[!/:0.0.1-SNAPSHOT]
+	at me.seoyeon.growthbatch.GrowthMailScheduler.sendMailToMe(GrowthMailScheduler.java:26) ~[!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at io.micrometer.observation.Observation.observe(Observation.java:498) ~[micrometer-observation-1.14.2.jar!/:1.14.2]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.1.jar!/:6.2.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:347) ~[na:na]
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:827) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:759) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1690) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1599) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:114) ~[feign-core-13.5.jar!/:na]
+	at feign.Client$Default.execute(Client.java:110) ~[feign-core-13.5.jar!/:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:92) ~[feign-core-13.5.jar!/:na]
+	... 20 common frames omitted
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T11:55:12.585+09:00  INFO 74244 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 74244 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T11:55:12.586+09:00  INFO 74244 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T11:55:13.036+09:00  INFO 74244 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+2025-01-03T11:55:13.236+09:00  INFO 74244 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T11:55:13.445+09:00  INFO 74244 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71b6172c
+2025-01-03T11:55:13.446+09:00  INFO 74244 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T11:55:13.590+09:00  INFO 74244 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.248 seconds (process running for 1.51)
+2025-01-03T11:55:13.592+09:00  INFO 74244 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-01-03T11:57:24.132+09:00  WARN 72151 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m14s115ms).
+2025-01-03T11:57:27.669+09:00  WARN 74244 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m14s117ms).
+2025-01-03T11:58:52.380+09:00  INFO 74244 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T11:58:53.324+09:00  INFO 74244 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T11:58:54.258+09:00  INFO 74244 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T12:00:39.660+09:00  WARN 72151 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s501ms).
+2025-01-03T12:00:43.195+09:00  WARN 74244 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s501ms).
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T12:07:38.332+09:00  INFO 81568 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 81568 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T12:07:38.333+09:00  INFO 81568 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T12:07:38.777+09:00  INFO 81568 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+>>>2025-01-03T12:07:40.852096
+>>>2025-01-03T12:07:42.854780
+>>>2025-01-03T12:07:44.859206
+>>>2025-01-03T12:07:46.864728
+>>>2025-01-03T12:07:48.868351
+>>>2025-01-03T12:07:50.873093
+>>>2025-01-03T12:07:52.876168
+>>>2025-01-03T12:07:54.881430
+>>>2025-01-03T12:07:56.887481
+>>>2025-01-03T12:07:58.892843
+>>>2025-01-03T12:08:00.898171
+>>>2025-01-03T12:08:02.899642
+>>>2025-01-03T12:08:04.905022
+>>>2025-01-03T12:08:06.915153
+>>>2025-01-03T12:08:08.916797
+>>>2025-01-03T12:08:10.918200
+>>>2025-01-03T12:08:12.922158
+>>>2025-01-03T12:08:14.927552
+>>>2025-01-03T12:08:16.932775
+>>>2025-01-03T12:08:18.935402
+>>>2025-01-03T12:08:20.940805
+>>>2025-01-03T12:08:22.946305
+>>>2025-01-03T12:08:24.949641
+>>>2025-01-03T12:08:26.955038
+>>>2025-01-03T12:08:28.960826
+>>>2025-01-03T12:08:30.962641
+>>>2025-01-03T12:08:32.967841
+>>>2025-01-03T12:08:34.973156
+>>>2025-01-03T12:08:36.977121
+>>>2025-01-03T12:08:38.979462
+>>>2025-01-03T12:08:40.984613
+>>>2025-01-03T12:08:42.989758
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T12:08:43.566+09:00  INFO 82721 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 82721 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T12:08:43.568+09:00  INFO 82721 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T12:08:44.070+09:00  INFO 82721 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+Hello World!!!
+>>>2025-01-03T12:08:44.994971
+>>>2025-01-03T12:08:46.151439
+>>>2025-01-03T12:08:47.000394
+>>>2025-01-03T12:08:48.157500
+>>>2025-01-03T12:08:49.005914
+>>>2025-01-03T12:08:50.160395
+>>>2025-01-03T12:08:51.011795
+>>>2025-01-03T12:08:52.165723
+>>>2025-01-03T12:08:53.014032
+>>>2025-01-03T12:08:54.167151
+>>>2025-01-03T12:08:55.019484
+>>>2025-01-03T12:08:56.173156
+>>>2025-01-03T12:08:57.024980
+>>>2025-01-03T12:08:58.178930
+>>>2025-01-03T12:08:59.028962
+>>>2025-01-03T12:09:00.183168
+>>>2025-01-03T12:09:01.033185
+>>>2025-01-03T12:09:02.185730
+>>>2025-01-03T12:09:03.038759
+>>>2025-01-03T12:09:04.190009
+>>>2025-01-03T12:09:05.040100
+>>>2025-01-03T12:09:06.191872
+>>>2025-01-03T12:09:07.046041
+>>>2025-01-03T12:09:08.194932
+>>>2025-01-03T12:09:09.051134
+>>>2025-01-03T12:09:10.200892
+>>>2025-01-03T12:09:11.056613
+>>>2025-01-03T12:09:12.205190
+>>>2025-01-03T12:09:13.060535
+>>>2025-01-03T12:09:14.209268
+>>>2025-01-03T12:09:15.066093
+>>>2025-01-03T12:09:16.212379
+>>>2025-01-03T12:09:17.067077
+>>>2025-01-03T12:09:18.217852
+>>>2025-01-03T12:09:19.072524
+>>>2025-01-03T12:09:20.220710
+>>>2025-01-03T12:09:21.077973
+>>>2025-01-03T12:09:22.226572
+>>>2025-01-03T12:09:23.082729
+>>>2025-01-03T12:09:24.229665
+>>>2025-01-03T12:09:25.088219
+>>>2025-01-03T12:09:26.232291
+>>>2025-01-03T12:09:27.091547
+>>>2025-01-03T12:09:28.234920
+>>>2025-01-03T12:09:29.094429
+>>>2025-01-03T12:09:30.236177
+>>>2025-01-03T12:09:31.097618
+>>>2025-01-03T12:09:32.242415
+>>>2025-01-03T12:09:33.104240
+>>>2025-01-03T12:09:34.245723
+>>>2025-01-03T12:09:35.108433
+>>>2025-01-03T12:09:36.249116
+>>>2025-01-03T12:09:37.113127
+>>>2025-01-03T12:09:38.254694
+>>>2025-01-03T12:09:39.114146
+>>>2025-01-03T12:09:40.259841
+>>>2025-01-03T12:09:41.119433
+>>>2025-01-03T12:09:42.264883
+>>>2025-01-03T12:09:43.122130
+>>>2025-01-03T12:09:44.268851
+>>>2025-01-03T12:09:45.125591
+>>>2025-01-03T12:09:46.274629
+>>>2025-01-03T12:09:47.131173
+>>>2025-01-03T12:09:48.279876
+>>>2025-01-03T12:09:49.133855
+>>>2025-01-03T12:09:50.284367
+>>>2025-01-03T12:09:51.138662
+>>>2025-01-03T12:09:52.286009
+>>>2025-01-03T12:09:53.144559
+>>>2025-01-03T12:09:54.291021
+>>>2025-01-03T12:09:55.150561
+>>>2025-01-03T12:09:56.296452
+>>>2025-01-03T12:09:57.154127
+>>>2025-01-03T12:09:58.300252
+>>>2025-01-03T12:09:59.157498
+>>>2025-01-03T12:10:00.304798
+>>>2025-01-03T12:10:01.162348
+>>>2025-01-03T12:10:02.306814
+>>>2025-01-03T12:10:03.167983
+>>>2025-01-03T12:10:04.312240
+>>>2025-01-03T12:10:05.172611
+>>>2025-01-03T12:10:06.317427
+>>>2025-01-03T12:10:07.175381
+>>>2025-01-03T12:10:08.323020
+>>>2025-01-03T12:10:09.180333
+>>>2025-01-03T12:10:10.327557
+>>>2025-01-03T12:10:11.183553
+>>>2025-01-03T12:10:12.333026
+>>>2025-01-03T12:10:13.185411
+>>>2025-01-03T12:10:14.337814
+>>>2025-01-03T12:10:15.190813
+>>>2025-01-03T12:10:16.343229
+>>>2025-01-03T12:10:17.194534
+>>>2025-01-03T12:10:18.347574
+>>>2025-01-03T12:10:19.200462
+>>>2025-01-03T12:10:20.350892
+>>>2025-01-03T12:10:21.206358
+>>>2025-01-03T12:10:22.354334
+>>>2025-01-03T12:10:23.207779
+>>>2025-01-03T12:10:24.359839
+>>>2025-01-03T12:10:25.213774
+>>>2025-01-03T12:10:26.362904
+>>>2025-01-03T12:10:27.215155
+>>>2025-01-03T12:10:28.365328
+>>>2025-01-03T12:10:29.218889
+>>>2025-01-03T12:10:30.366612
+>>>2025-01-03T12:10:31.222844
+>>>2025-01-03T12:10:32.371041
+>>>2025-01-03T12:10:33.228619
+>>>2025-01-03T12:10:34.374961
+>>>2025-01-03T12:10:35.233116
+>>>2025-01-03T12:10:36.379055
+>>>2025-01-03T12:10:37.239007
+>>>2025-01-03T12:10:38.382572
+>>>2025-01-03T12:10:39.244422
+>>>2025-01-03T12:10:40.386817
+>>>2025-01-03T12:10:41.247406
+>>>2025-01-03T12:10:42.392510
+>>>2025-01-03T12:10:43.253286
+>>>2025-01-03T12:10:44.397224
+>>>2025-01-03T12:10:45.258286
+>>>2025-01-03T12:10:46.403170
+>>>2025-01-03T12:10:47.264544
+>>>2025-01-03T12:10:48.404509
+>>>2025-01-03T12:10:49.271520
+>>>2025-01-03T12:10:50.405952
+>>>2025-01-03T12:10:51.277479
+>>>2025-01-03T12:10:52.410595
+>>>2025-01-03T12:10:53.283355
+>>>2025-01-03T12:10:54.415999
+>>>2025-01-03T12:10:55.286433
+>>>2025-01-03T12:10:56.420387
+>>>2025-01-03T12:10:57.289225
+>>>2025-01-03T12:10:58.425844
+>>>2025-01-03T12:10:59.291493
+>>>2025-01-03T12:11:00.430105
+>>>2025-01-03T12:11:01.294222
+>>>2025-01-03T12:11:02.434925
+>>>2025-01-03T12:11:03.300250
+>>>2025-01-03T12:11:04.439795
+>>>2025-01-03T12:11:05.306202
+>>>2025-01-03T12:11:06.445532
+>>>2025-01-03T12:11:07.311869
+>>>2025-01-03T12:11:08.447846
+>>>2025-01-03T12:11:09.316718
+>>>2025-01-03T12:11:10.450782
+>>>2025-01-03T12:11:11.319209
+>>>2025-01-03T12:11:12.451689
+>>>2025-01-03T12:11:13.320634
+>>>2025-01-03T12:11:14.456169
+>>>2025-01-03T12:11:15.326232
+>>>2025-01-03T12:11:16.461778
+>>>2025-01-03T12:11:17.329418
+>>>2025-01-03T12:11:18.465995
+>>>2025-01-03T12:11:19.333400
+>>>2025-01-03T12:11:20.471465
+>>>2025-01-03T12:11:21.334824
+>>>2025-01-03T12:11:22.477404
+>>>2025-01-03T12:11:23.338646
+>>>2025-01-03T12:11:24.483068
+>>>2025-01-03T12:11:25.341599
+>>>2025-01-03T12:11:26.488985
+>>>2025-01-03T12:11:27.346617
+>>>2025-01-03T12:11:28.491352
+>>>2025-01-03T12:11:29.352080
+>>>2025-01-03T12:11:30.495229
+>>>2025-01-03T12:11:31.354424
+>>>2025-01-03T12:11:32.500974
+>>>2025-01-03T12:11:33.356024
+>>>2025-01-03T12:11:34.504591
+>>>2025-01-03T12:11:35.361974
+>>>2025-01-03T12:11:36.508114
+>>>2025-01-03T12:11:37.366288
+>>>2025-01-03T12:11:38.513423
+>>>2025-01-03T12:11:39.371149
+>>>2025-01-03T12:11:40.519420
+>>>2025-01-03T12:11:41.377084
+>>>2025-01-03T12:11:42.523341
+>>>2025-01-03T12:11:43.382233
+>>>2025-01-03T12:11:44.525145
+>>>2025-01-03T12:11:45.384882
+>>>2025-01-03T12:11:46.529136
+>>>2025-01-03T12:11:47.386668
+>>>2025-01-03T12:11:48.534451
+>>>2025-01-03T12:11:49.392171
+>>>2025-01-03T12:11:50.535442
+>>>2025-01-03T12:11:51.395578
+>>>2025-01-03T12:11:52.536444
+>>>2025-01-03T12:11:53.399930
+>>>2025-01-03T12:11:54.537576
+>>>2025-01-03T12:11:55.404364
+>>>2025-01-03T12:11:56.542093
+>>>2025-01-03T12:11:57.408136
+>>>2025-01-03T12:11:58.547133
+>>>2025-01-03T12:11:59.412656
+>>>2025-01-03T12:12:00.550365
+>>>2025-01-03T12:12:01.417115
+>>>2025-01-03T12:12:02.553910
+>>>2025-01-03T12:12:03.419672
+>>>2025-01-03T12:12:04.559277
+>>>2025-01-03T12:12:05.425632
+>>>2025-01-03T12:12:06.564775
+>>>2025-01-03T12:12:07.431607
+>>>2025-01-03T12:12:08.568679
+>>>2025-01-03T12:12:09.434009
+>>>2025-01-03T12:12:10.570821
+>>>2025-01-03T12:12:11.437326
+>>>2025-01-03T12:12:12.572514
+>>>2025-01-03T12:12:13.440537
+>>>2025-01-03T12:12:14.577903
+>>>2025-01-03T12:12:15.446421
+>>>2025-01-03T12:12:16.582054
+>>>2025-01-03T12:12:17.449106
+>>>2025-01-03T12:12:18.587511
+>>>2025-01-03T12:12:19.450340
+>>>2025-01-03T12:12:20.590414
+>>>2025-01-03T12:12:21.453644
+>>>2025-01-03T12:12:22.596040
+>>>2025-01-03T12:12:23.459557
+>>>2025-01-03T12:12:24.597878
+>>>2025-01-03T12:12:25.464801
+>>>2025-01-03T12:12:26.602250
+>>>2025-01-03T12:12:27.469067
+>>>2025-01-03T12:12:28.606739
+>>>2025-01-03T12:12:29.473796
+>>>2025-01-03T12:12:30.612630
+>>>2025-01-03T12:12:31.475072
+>>>2025-01-03T12:12:32.616147
+>>>2025-01-03T12:12:33.478174
+>>>2025-01-03T12:12:34.621874
+>>>2025-01-03T12:12:35.480206
+>>>2025-01-03T12:12:36.625118
+>>>2025-01-03T12:12:37.483981
+>>>2025-01-03T12:12:38.628252
+>>>2025-01-03T12:12:39.488123
+>>>2025-01-03T12:12:40.633214
+>>>2025-01-03T12:12:41.493654
+>>>2025-01-03T12:12:42.637091
+>>>2025-01-03T12:12:43.497327
+>>>2025-01-03T12:12:44.641579
+>>>2025-01-03T12:12:45.503199
+>>>2025-01-03T12:12:46.645924
+>>>2025-01-03T12:12:47.504755
+>>>2025-01-03T12:12:48.651967
+>>>2025-01-03T12:12:49.509293
+>>>2025-01-03T12:12:50.657454
+>>>2025-01-03T12:12:51.513689
+>>>2025-01-03T12:12:52.662961
+>>>2025-01-03T12:12:53.516774
+>>>2025-01-03T12:12:54.666077
+>>>2025-01-03T12:12:55.522329
+>>>2025-01-03T12:12:56.672007
+>>>2025-01-03T12:12:57.528250
+>>>2025-01-03T12:12:58.673197
+>>>2025-01-03T12:12:59.533066
+>>>2025-01-03T12:13:00.676213
+>>>2025-01-03T12:13:01.538169
+>>>2025-01-03T12:13:02.677385
+>>>2025-01-03T12:13:03.542552
+>>>2025-01-03T12:13:04.682929
+>>>2025-01-03T12:13:05.547556
+>>>2025-01-03T12:13:06.688492
+>>>2025-01-03T12:13:07.552277
+>>>2025-01-03T12:13:08.695977
+>>>2025-01-03T12:13:09.558939
+>>>2025-01-03T12:13:10.701394
+>>>2025-01-03T12:13:11.563568
+>>>2025-01-03T12:13:12.707094
+>>>2025-01-03T12:13:13.568019
+>>>2025-01-03T12:13:14.709746
+>>>2025-01-03T12:13:15.573538
+>>>2025-01-03T12:13:16.714516
+>>>2025-01-03T12:13:17.578913
+>>>2025-01-03T12:13:18.716704
+>>>2025-01-03T12:13:19.584599
+>>>2025-01-03T12:13:20.722505
+>>>2025-01-03T12:13:21.589146
+>>>2025-01-03T12:13:22.724879
+>>>2025-01-03T12:13:23.589846
+>>>2025-01-03T12:13:24.730387
+>>>2025-01-03T12:13:25.593823
+>>>2025-01-03T12:13:26.735902
+>>>2025-01-03T12:13:27.599239
+>>>2025-01-03T12:13:28.741281
+>>>2025-01-03T12:13:29.601426
+>>>2025-01-03T12:13:30.743919
+>>>2025-01-03T12:13:31.602786
+>>>2025-01-03T12:13:32.748916
+>>>2025-01-03T12:13:33.604243
+>>>2025-01-03T12:13:34.754375
+>>>2025-01-03T12:13:35.609471
+>>>2025-01-03T12:13:36.758569
+>>>2025-01-03T12:13:37.614713
+>>>2025-01-03T12:13:38.764030
+>>>2025-01-03T12:13:39.618697
+>>>2025-01-03T12:13:40.768150
+>>>2025-01-03T12:13:41.622899
+>>>2025-01-03T12:13:42.768471
+>>>2025-01-03T12:13:43.627113
+>>>2025-01-03T12:13:44.773818
+>>>2025-01-03T12:13:45.633300
+>>>2025-01-03T12:13:46.778517
+>>>2025-01-03T12:13:47.638773
+>>>2025-01-03T12:13:48.780944
+>>>2025-01-03T12:13:49.639993
+>>>2025-01-03T12:13:50.784623
+>>>2025-01-03T12:13:51.646300
+>>>2025-01-03T12:13:52.789892
+>>>2025-01-03T12:13:53.651602
+>>>2025-01-03T12:13:54.795322
+>>>2025-01-03T12:13:55.652912
+>>>2025-01-03T12:13:56.800783
+>>>2025-01-03T12:13:57.658236
+>>>2025-01-03T12:13:58.806399
+>>>2025-01-03T12:13:59.663272
+>>>2025-01-03T12:14:00.811319
+>>>2025-01-03T12:14:01.666478
+>>>2025-01-03T12:14:02.814270
+>>>2025-01-03T12:14:03.672319
+>>>2025-01-03T12:14:04.820302
+>>>2025-01-03T12:14:05.676753
+>>>2025-01-03T12:14:06.826258
+>>>2025-01-03T12:14:07.682228
+>>>2025-01-03T12:14:08.829512
+>>>2025-01-03T12:14:09.685127
+>>>2025-01-03T12:14:10.831628
+>>>2025-01-03T12:14:11.685973
+>>>2025-01-03T12:14:12.836950
+>>>2025-01-03T12:14:13.691443
+>>>2025-01-03T12:14:14.840997
+>>>2025-01-03T12:14:15.695993
+>>>2025-01-03T12:14:16.844254
+>>>2025-01-03T12:14:17.701313
+>>>2025-01-03T12:14:18.849318
+>>>2025-01-03T12:14:19.706530
+>>>2025-01-03T12:14:20.852498
+>>>2025-01-03T12:14:21.710961
+>>>2025-01-03T12:14:22.855573
+>>>2025-01-03T12:14:23.716215
+>>>2025-01-03T12:14:24.860741
+>>>2025-01-03T12:14:25.721640
+>>>2025-01-03T12:14:26.866135
+>>>2025-01-03T12:14:27.727136
+>>>2025-01-03T12:14:28.871676
+>>>2025-01-03T12:14:29.732312
+>>>2025-01-03T12:14:30.876825
+>>>2025-01-03T12:14:31.735313
+>>>2025-01-03T12:14:32.881044
+>>>2025-01-03T12:14:33.736664
+>>>2025-01-03T12:14:34.883647
+>>>2025-01-03T12:14:35.741691
+>>>2025-01-03T12:14:36.889055
+>>>2025-01-03T12:14:37.743538
+>>>2025-01-03T12:14:38.889860
+>>>2025-01-03T12:14:39.746835
+>>>2025-01-03T12:14:40.893662
+>>>2025-01-03T12:14:41.752110
+>>>2025-01-03T12:14:42.898843
+>>>2025-01-03T12:14:43.756
+>>>2025-01-03T12:14:44.900381
+>>>2025-01-03T12:14:45.761139
+>>>2025-01-03T12:14:46.905565
+>>>2025-01-03T12:14:47.766321
+>>>2025-01-03T12:14:48.910739
+>>>2025-01-03T12:14:49.771535
+>>>2025-01-03T12:14:50.915236
+>>>2025-01-03T12:14:51.777117
+>>>2025-01-03T12:14:52.916521
+>>>2025-01-03T12:14:53.783152
+>>>2025-01-03T12:14:54.921764
+>>>2025-01-03T12:14:55.785612
+>>>2025-01-03T12:14:56.927284
+>>>2025-01-03T12:14:57.791089
+>>>2025-01-03T12:14:58.930242
+>>>2025-01-03T12:14:59.796754
+>>>2025-01-03T12:15:00.935484
+>>>2025-01-03T12:15:01.802938
+>>>2025-01-03T12:15:02.939952
+>>>2025-01-03T12:15:03.808240
+>>>2025-01-03T12:15:04.942739
+>>>2025-01-03T12:15:05.809462
+>>>2025-01-03T12:15:06.948575
+>>>2025-01-03T12:15:07.814987
+>>>2025-01-03T12:15:08.953535
+>>>2025-01-03T12:15:09.820424
+>>>2025-01-03T12:15:10.958692
+>>>2025-01-03T12:15:11.825203
+>>>2025-01-03T12:15:12.963926
+>>>2025-01-03T12:15:13.830753
+>>>2025-01-03T12:15:14.969351
+>>>2025-01-03T12:15:15.835387
+>>>2025-01-03T12:15:16.972857
+>>>2025-01-03T12:15:17.840740
+>>>2025-01-03T12:15:18.978282
+>>>2025-01-03T12:15:19.841575
+>>>2025-01-03T12:15:20.983590
+>>>2025-01-03T12:15:21.847018
+>>>2025-01-03T12:15:22.986788
+>>>2025-01-03T12:15:24.989805
+>>>2025-01-03T12:15:26.995189
+>>>2025-01-03T12:15:29.000473
+>>>2025-01-03T12:15:31.005727
+>>>2025-01-03T12:15:33.011139
+>>>2025-01-03T12:15:35.013605
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-03T12:22:31.213+09:00  INFO 93708 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Starting GrowthBatchApplication v0.0.1-SNAPSHOT using Java 21.0.3 with PID 93708 (/Users/yeonnex/Desktop/growth-engine/batch/build/libs/batch-0.0.1-SNAPSHOT.jar started by yeonnex in /Users/yeonnex/Desktop/growth-engine)
+2025-01-03T12:22:31.214+09:00  INFO 93708 --- [           main] m.s.growthbatch.GrowthBatchApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-01-03T12:22:31.637+09:00  INFO 93708 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b036687-d52f-341b-b263-4c52f065f02e
+2025-01-03T12:22:31.835+09:00  INFO 93708 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-03T12:22:32.074+09:00  INFO 93708 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56c8e6f0
+2025-01-03T12:22:32.076+09:00  INFO 93708 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-03T12:22:32.224+09:00  INFO 93708 --- [           main] m.s.growthbatch.GrowthBatchApplication   : Started GrowthBatchApplication in 1.312 seconds (process running for 1.725)
+2025-01-03T12:22:32.225+09:00  INFO 93708 --- [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2025-01-03T12:30:09.125+09:00  INFO 93708 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T12:30:10.015+09:00  INFO 93708 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.
+2025-01-03T12:30:10.996+09:00  INFO 93708 --- [   scheduling-1] me.seoyeon.mailclient.EmailSender        : 메일 발송 완료.

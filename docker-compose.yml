@@ -1,0 +1,44 @@
+services:
+  app:
+    build:
+      context: ./batch
+      dockerfile: Dockerfile
+    restart: always
+    image: yeonnex/hello-batch:latest
+    container_name: hello-batch
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/demo
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=pass
+      - NAVER_MAIL_APP_PASSWORD=${NAVER_MAIL_APP_PASSWORD}
+      - GITHUB_API_BEARER_TOKEN=${GITHUB_API_BEARER_TOKEN}
+    depends_on:
+      - db # MySQL이 준비된 후 시작
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pass      # root 사용자 비밀번호 설정
+      MYSQL_USER: root               # 일반 사용자 이름 설정
+      MYSQL_PASSWORD: pass           # 위의 사용자 비밀번호 설정
+      MYSQL_DATABASE: demo           # 기본 데이터베이스 설정
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local
