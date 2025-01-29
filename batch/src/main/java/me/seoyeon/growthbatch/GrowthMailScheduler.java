@@ -23,7 +23,8 @@ public class GrowthMailScheduler {
     this.growthRepoService = growthRepoService;
   }
 
-  @Scheduled(cron = "0 15 8,21 * * *")
+  @Scheduled(fixedDelay = 60000)
+//  @Scheduled(cron = "0 15 8,21 * * *")
   public void sendMailToMe() {
     log.info("발송 준비...");
     List<GrowthMemoItem> memoItems = growthRepoService.pickRandomGrowthMemo(3);
