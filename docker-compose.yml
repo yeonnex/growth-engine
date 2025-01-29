@@ -1,11 +1,11 @@
 services:
   app:
-    build:
-      context: ./batch
-      dockerfile: Dockerfile
+#    build:
+#      context: ./batch
+#      dockerfile: Dockerfile
     restart: always
-    image: yeonnex/hello-batch:latest
-    container_name: hello-batch
+    image: yeonnex/growth-batch:latest
+    container_name: growth-batch
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/demo
       - SPRING_DATASOURCE_USERNAME=root
