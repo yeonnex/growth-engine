@@ -29,8 +29,9 @@ public class GrowthMailScheduler {
     this.memoFetcherService = memoFetcherService;
   }
 
-//  @Scheduled(fixedDelay = 1000)
-    @Scheduled(cron = "0 0 8,21 * * *")
+  @Scheduled(fixedDelay = 300000)
+  //  @Scheduled(fixedDelay = 1000)
+  //    @Scheduled(cron = "0 0 8,21 * * *")
   public void sendMailToMe() {
     // 1,3,7일 전 커밋의 메모 발송
     int totalSentMemos = this.memoFetcherService.fetchAndSendMemos();
