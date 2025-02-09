@@ -46,3 +46,15 @@ jobs:
         run: |
           docker tag yeonnex/growth-batch:latest yeonnex/growth-batch:latest
           docker push yeonnex/growth-batch:latest
+      - name: AWS 인증
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+      - name: EC2에서 도커 컴포즈 다시 실행 (SSM)
+        run: |
+          aws ssm send-command \
+            --document-name "AWS-RunShellScript" \
+            --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
+            --parameters 'commands=["docker-compose -f /path/to/docker-compose.yml up -d"]'
