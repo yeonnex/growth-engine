@@ -34,8 +34,8 @@ public class GrowthMailScheduler {
   //    @Scheduled(cron = "0 0 8,21 * * *")
   public void sendMailToMe() {
     // 1,3,7일 전 커밋의 메모 발송
-    int totalSentMemos = this.memoFetcherService.fetchAndSendMemos();
-    if (totalSentMemos >= 5) return;
+//    int totalSentMemos = this.memoFetcherService.fetchAndSendMemos();
+//    if (totalSentMemos >= 5) return;
     // 랜덤 메모 3개 발송 TODO 랜덤 메모 발송 자체도 MemoFetcher 인터페이스 구현하는 방식으로 설계하기
     List<GrowthMemoItem> memoItems = this.randomMemoFetcherService.pickRandomGrowthMemo(3);
     List<GitHubContentItem> detailMemos = this.randomMemoFetcherService.getDetailMemos(memoItems);
