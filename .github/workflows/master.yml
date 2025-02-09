@@ -54,10 +54,14 @@ jobs:
           aws-region: ap-northeast-2
       - name: EC2에서 도커 컴포즈 다시 실행 (SSM)
         run: |
+          # 첫 번째 명령: Docker 이미지 다운로드
           aws ssm send-command \
-            --document-name "AWS-RunShellScript" \
-            --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
-            --parameters 'commands=[
-              "docker pull yeonnex/growth-batch:latest",  # Docker Hub에서 최신 이미지 다운로드
-              "docker-compose -f /home/ec2-user/docker-compose.yml up -d"  # 도커 컴포즈 실행
-            ]'
+          --document-name "AWS-RunShellScript" \
+          --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
+          --parameters 'commands=["docker pull yeonnex/growth-batch:latest"]'
+      
+          # 두 번째 명령: Docker Compose 실행
+          aws ssm send-command \
+          --document-name "AWS-RunShellScript" \
+          --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
+          --parameters 'commands=["docker-compose -f /home/ec2-user/docker-compose.yml up -d"]'
