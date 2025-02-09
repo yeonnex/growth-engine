@@ -57,4 +57,4 @@ jobs:
           aws ssm send-command \
             --document-name "AWS-RunShellScript" \
             --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
-            --parameters 'commands=["docker-compose -f /path/to/docker-compose.yml up -d"]'
+            --parameters 'commands=["docker-compose -f /home/ec2-user/docker-compose.yml up -d"]'
