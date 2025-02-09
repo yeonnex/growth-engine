@@ -11,14 +11,15 @@ import me.seoyeon.githubclient.dto.response.GitHubTopLevelContents;
 import me.seoyeon.githubclient.dto.response.GitHubTreeContents;
 import me.seoyeon.githubclient.dto.response.GitHubTreeItem;
 import me.seoyeon.githubclient.type.GitHubTreeItemType;
+import me.seoyeon.growthbatch.dto.GrowthMemoItem;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GrowthRepoService {
+public class RandomMemoFetcherService {
 
   private final GithubClient githubClient;
 
-  public GrowthRepoService(GithubClient githubClient) {
+  public RandomMemoFetcherService(GithubClient githubClient) {
     this.githubClient = githubClient;
   }
 
@@ -30,12 +31,8 @@ public class GrowthRepoService {
    */
   public List<GrowthMemoItem> pickRandomGrowthMemo(int count) {
 
-    if (count > 5) {
-      throw new IllegalArgumentException("요청된 개수는 5개 이하여야 합니다.");
-    }
-
     GitHubTopLevelContents topLevelContents =
-        githubClient.fetchTopLevelContents("yeonnex", "growth-bytes");
+        githubClient.fetchRepositoryRootContent("yeonnex", "growth-bytes");
 
     // 최상위 항목들 중 BLOB 타입인 .gitignore 항목(GitHubTreeItemType.BLOB) 제거
     List<GitHubTreeItem> topLevelTree =
@@ -60,6 +57,7 @@ public class GrowthRepoService {
       GitHubTreeItem markdownMemoFile = getMarkdownMemoFile(contents);
       memoItems.add(GrowthMemoItem.create(markdownMemoFile.path(), markdownMemoFile.url()));
     }
+
     // 아직 마크다운 파일 개수를 채우지 못한 경우
     if (memoItems.size() < count) {
       // 더 조회해야 할 파일 개수

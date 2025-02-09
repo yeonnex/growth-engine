@@ -1,4 +1,4 @@
-package me.seoyeon.growthbatch.service;
+package me.seoyeon.growthbatch.dto;
 
 public record GrowthMemoItem(String title, String url) {
   public static GrowthMemoItem create(String title, String url) {
