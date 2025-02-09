@@ -58,7 +58,7 @@ jobs:
           aws ssm send-command \
           --document-name "AWS-RunShellScript" \
           --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
-          --parameters 'commands=["docker rmi yeonnex/growth-batch:latest"]'
+          --parameters 'commands=["docker system prune -af"]'
           
           # 두 번째 명령: Docker 이미지 다운로드
           aws ssm send-command \
