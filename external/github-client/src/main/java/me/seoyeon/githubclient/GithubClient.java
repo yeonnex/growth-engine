@@ -1,11 +1,12 @@
 package me.seoyeon.githubclient;
 
-import me.seoyeon.githubclient.dto.response.GitHubContentItem;
-import me.seoyeon.githubclient.dto.response.GitHubTopLevelContents;
-import me.seoyeon.githubclient.dto.response.GitHubTreeContents;
+import java.util.List;
+
+import me.seoyeon.githubclient.dto.response.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name = "github-client", url = "https://api.github.com")
 public interface GithubClient {
@@ -19,7 +20,7 @@ public interface GithubClient {
    * @return 최상위 항목 목록
    */
   @GetMapping("/repos/{owner}/{repo}/git/trees/master")
-  GitHubTopLevelContents fetchTopLevelContents(
+  GitHubTopLevelContents fetchRepositoryRootContent(
       @PathVariable("owner") String owner, @PathVariable("repo") String repo);
 
   /**
@@ -40,6 +41,36 @@ public interface GithubClient {
 
   @GetMapping("/repos/{owner}/{repo}/git/blobs/{sha}")
   GitHubContentItem fetchContentItem(
+      @PathVariable("owner") String owner,
+      @PathVariable("repo") String repo,
+      @PathVariable("sha") String sha);
+
+  /**
+   * 특정 기간 동안의 커밋 이력을 조회한다.
+   *
+   * @param owner 저장소 소유자 (예: "yeonnex")
+   * @param repo 저장소 이름
+   * @param since 조회 시작 시점 (ISO 8601 형식, 예: "2024-02-01T00:00:00Z")
+   * @param until 조회 종료 시점 (ISO 8601 형식, 예: "2024-02-07T23:59:59Z")
+   * @return 지정된 기간 내에 발생한 커밋 목록을 담은 {@link List<GithubCommit>}
+   */
+  @GetMapping("/repos/{owner}/{repo}/commits")
+  List<GithubCommit> fetchNDaysAgoCommits(
+      @PathVariable("owner") String owner,
+      @PathVariable("repo") String repo,
+      @RequestParam(name = "since") String since,
+      @RequestParam(name = "until") String until);
+
+  /**
+   * 특정 커밋의 파일 목록을 조회한다.
+   *
+   * @param owner 저장소 소유자 (예: "yeonnex")
+   * @param repo 저장소 이름
+   * @param sha 조회할 커밋의 sha 값
+   * @return 해당 커밋에 포함된 파일 목록을 담은 {@link GithubFiles} 객체
+   */
+  @GetMapping("/repos/{owner}/{repo}/commits/{sha}")
+  GithubFiles fetchCommitFiles(
       @PathVariable("owner") String owner,
       @PathVariable("repo") String repo,
       @PathVariable("sha") String sha);
