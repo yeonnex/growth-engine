@@ -58,6 +58,6 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
             --parameters 'commands=[
-          "docker pull yeonnex/growth-batch:latest",  # Docker Hub에서 최신 이미지 다운로드
-          "docker-compose -f /home/ec2-user/docker-compose.yml up -d"  # 도커 컴포즈 실행"
-          ]'
+              "docker pull yeonnex/growth-batch:latest",  # Docker Hub에서 최신 이미지 다운로드
+              "docker-compose -f /home/ec2-user/docker-compose.yml up -d"  # 도커 컴포즈 실행
+            ]'
