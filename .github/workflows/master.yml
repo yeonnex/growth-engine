@@ -54,19 +54,25 @@ jobs:
           aws-region: ap-northeast-2
       - name: EC2에서 도커 컴포즈 다시 실행 (SSM)
         run: |
-          # 첫 번째 명령: 기존 Docker 이미지 삭제
+          # 첫 번째 명령: 기존 Docker 컴포즈 다운
+          aws ssm send-command \
+          --document-name "AWS-RunShellScript" \
+          --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
+          --parameters 'commands=["docker-compose down"]'
+          
+          # 두 번째 명령: 기존 Docker 이미지 삭제
           aws ssm send-command \
           --document-name "AWS-RunShellScript" \
           --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
           --parameters 'commands=["docker system prune -af"]'
           
-          # 두 번째 명령: Docker 이미지 다운로드
+          # 세 번째 명령: Docker 이미지 다운로드
           aws ssm send-command \
           --document-name "AWS-RunShellScript" \
           --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
           --parameters 'commands=["docker pull yeonnex/growth-batch:latest"]'
       
-          # 세 번째 명령: Docker Compose 실행
+          # 네 번째 명령: Docker Compose 실행
           aws ssm send-command \
           --document-name "AWS-RunShellScript" \
           --targets "Key=instanceIds,Values=${{ secrets.AWS_INSTANCE_ID }}" \
